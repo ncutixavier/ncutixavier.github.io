@@ -1,0 +1,30 @@
+.box_2{
+    position: absolute;
+    top: 40%;
+    left: 46%;
+    width: 8%;
+    height: 17%;
+    transform: translate(50% -50%);
+    background-color: transparent;
+    border-radius: 50%;
+    /* animation: scaleFrame 2s ease-in-out 1s infinite normal; */
+    animation-name: scaleFrame; 
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    
+}
+
+@keyframes scaleFrame{
+    0%{
+        transform: scale(0);
+        background-color: rgb(29, 173, 221);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
