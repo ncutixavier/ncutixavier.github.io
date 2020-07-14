@@ -1,3 +1,7 @@
+body{
+    background-color: rgb(211, 211, 240);
+}
+
 .box_2{
     position: absolute;
     top: 40%;
