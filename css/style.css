@@ -1,5 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+html,body{
+    font-size: 10px;
+    font-family: 'Bellefair';
+    background-color: #FAFAFA;
+}
+
+.title{
+    font-size: 4rem;
+    text-align: center;
+    letter-spacing: 5px;
+    color: #0A65D0;
+    margin: 2rem 0;
+}
+
+.ct-content-text>h3, .social-media>h3{
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+
+.fab{
+    font-size: 2rem;
+}
+
+.facebook-f{
+    padding: 1rem 1.8rem;
+}
+
+.social-media-items{
+    display: flex;
+    align-items: center;
+}
+span>a>i{
+    background-color: #0A65D0;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    color: #fff;
+}
+
+.social-media>p{
+    font-size: 1.5rem;
+    letter-spacing: 13px;
+}
+
+.ct-items{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    /* background-color: cadetblue; */
+}
+
+.ct-form{
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.ct-form-input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.8rem;
+}
+
+.ct-form-input>label{
+    font-size: 2rem;
+}
+
+.ct-form-input>input, textarea{
+    font-size: 1.5rem;
+    padding: .8rem 0;
+    outline: none;
+    color: #0A65D0;
+    border: 1px solid #0A65D0;
+    border-radius: .5rem;
+}
+
+.ct-form-input>button{
+    background-color: #0A65D0;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: .8rem 0;
+    border-radius: .5rem;
+    font-size: 2rem;
+} 
+
+button:hover {
+    background-color: rgba(10, 101, 208, .6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body{
-    background-color: rgb(232, 232, 243);
+    /* background-color: rgb(232, 232, 243); */
 }
 
 .box_2{
