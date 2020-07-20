@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    
+    font-family: 'Bellefair';
 }
 
 html,body{
@@ -10,25 +10,27 @@ html,body{
     background-color: #FAFAFA;
 }
 
-.title{
+
+.title>h3{
     font-size: 4rem;
-    text-align: center;
-    letter-spacing: 5px;
     color: #0A65D0;
-    margin: 2rem 0;
+    font-size: 8rem;
+    margin-bottom: 5rem;
+    font-weight: normal;
 }
 
 .ct-content-text>h3, .social-media>h3{
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 3rem;
+    font-weight: normal;
 }
 
 .fab{
     font-size: 2rem;
 }
 
-.facebook-f{
-    padding: 1rem 1.8rem;
+.fa-facebook-f{
+    padding: 1rem 1.3rem;
 }
 
 .social-media-items{
@@ -46,18 +48,19 @@ span>a>i{
 .social-media>p{
     font-size: 1.5rem;
     letter-spacing: 13px;
+    margin-left: .6rem;
 }
 
 .ct-items{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     padding: 2rem 0;
-    /* background-color: cadetblue; */
 }
 
 .ct-form{
     background-color: #fff;
-    padding: 2.5rem;
+    padding: 5rem;
     border-radius: 5px;
     width: 30%;
 }
@@ -69,10 +72,10 @@ span>a>i{
 }
 
 .ct-form-input>label{
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
-.ct-form-input>input, textarea{
+.ct-form-input>input, textarea, span>input{
     font-size: 1.5rem;
     padding: .8rem 0;
     outline: none;
@@ -81,7 +84,8 @@ span>a>i{
     border-radius: .5rem;
 }
 
-.ct-form-input>button{
+
+.ct-form-input>button, span>button{
     background-color: #0A65D0;
     outline: none;
     border: none;
@@ -91,10 +95,34 @@ span>a>i{
     font-size: 2rem;
 } 
 
-button:hover {
+span>button, span>input {
+    padding: 1rem;
+    margin-left: 1rem;
+}
+
+button:hover, .fab:hover {
     background-color: rgba(10, 101, 208, .6);
 }
 
+.ft-text{
+    background-color: #050313;
+    color: #fff;
+    padding: 2.5rem 0;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+
+.ft-subscribe{
+    background-color: rgba(5, 3, 19, .1);
+    padding: 7rem;
+}
+
+.subscribe-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
