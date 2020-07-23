@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Bellefair';
+    box-sizing: border-box;
 }
 
 html,body{
@@ -9,6 +10,199 @@ html,body{
     font-family: 'Bellefair';
     background-color: #FAFAFA;
 }
+
+/* ***********************************Homepage*********************************** */
+.landing-page{
+    background-color: rgb(10, 101, 208, .08);
+    /* height: 100vh; */
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+    z-index: 1000;
+}
+
+.navbar-logo img{
+    width: 60px;
+    height: 60px;
+}
+
+.navbar-list>ul{
+    display: flex;
+    list-style: none;
+}
+
+.navbar-list>ul>li>{
+    list-style-type: none;
+    color: #000;
+    height: 100%;
+}
+
+.navbar-list>ul>li>a{
+    padding:2rem;
+    text-decoration: none;
+    font-size: 1.8rem;
+    
+}
+
+a:hover{
+    color: #0A65D0;
+    font-weight: bold;
+}
+
+.land-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 6rem; */
+    height: 100vh;
+}
+
+.land-content img{
+    z-index: 10;
+    width: 180px;
+    animation: leftToRight 3s ease-in-out;
+}
+
+.land-content h1{
+    font-family: 'Caveat';
+    font-size: 8rem;
+    color: #0A65D0;
+    font-weight: normal;
+    z-index: inherit;
+    animation: moveInBottom 4s ease-in-out;
+}
+
+.land-content p{
+    color: #0A65D0;
+    z-index: 10;
+    font-size: 3rem;
+    animation: moveInBottom 7s ease-in-out;
+}
+
+.go-down-btn{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    border-radius: 50%;
+    border: none;
+    animation: topToBottom 1s infinite alternate;
+    cursor: pointer;
+    outline: none;
+    color:rgb(28, 114, 190);
+}
+
+.go-down-btn:hover{
+    background-color: transparent;
+}
+
+.clouds{
+    overflow: hidden;
+}
+
+.cloud_1{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    color: #fff;
+    font-size: 15rem;
+    animation-name: leftToRight_cloud; 
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.cloud_2{
+    position: absolute;
+    top: 40%;
+    right: 0;
+    color: #fff;
+    font-size: 25rem;
+    opacity: .5;
+    animation-name: RightToleft_cloud; 
+    animation-duration: 30s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes topToBottom {
+    0% {
+      bottom: 2%;
+    }
+    100% {
+        bottom: 5%;
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(6rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+}
+
+@keyframes leftToRight {
+    0% {
+      opacity: 0;
+      transform: translate(-10rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+}
+
+@keyframes leftToRight_cloud {
+    0% {
+        left: 0;
+    }
+    100% {
+        opacity: 0.4;
+        left: 85%;
+    }
+  }
+
+@keyframes RightToleft_cloud {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: 85%;
+    }
+  }
+/* ******************************************************************************** */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .title>h3{
