@@ -1,40 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ncutixavier | Portifolio</title>
-    <link href='https://fonts.googleapis.com/css?family=Bellefair|Cormorant Garamond|Caveat' rel='stylesheet'>
-    <script src="https://kit.fontawesome.com/ef63f52b34.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Bellefair|Cormorant Garamond|Caveat|Roboto"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ef63f52b34.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <section class="landing-page" id="home">
-        <div class="navbar">
-            <div class="navbar-logo">
-                <img src="img/nx.png" alt="" srcset="">
+      <div class="navbar">
+        <div class="navbar-logo">
+          <img src="img/nx.png" alt="" srcset="" />
+        </div>
+        <div class="navbar-list">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Works</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="#contacts">Contact</a></li>
+            <li><a href="">Login</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="land-content">
+        <img src="img/photo.png" alt="" srcset="" />
+        <h1>I'm Ncuti Xavier</h1>
+        <p>a software engineer</p>
+      </div>
+      <div class="go-down-btn"><i class="fas fa-angle-double-down"></i></div>
+      <div class="clouds">
+        <div class="cloud_1"><i class="fas fa-cloud"></i></div>
+        <div class="cloud_2"><i class="fas fa-cloud"></i></div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+       <div class="subscribe-page">
+        <div class="subscribe-form">
+          <span><i class="fas fa-envelope"></i></span>
+          <span> <h1>Join My Mailing List</h1></span>
+          <span
+            ><input
+              type="email"
+              name=""
+              id="email"
+              placeholder="example@example.com"
+          /></span>
+          <span><button type="submit">Subscribe</button></span>
+        </div>
+      </div>
+<!--
+      <div class="contact-page">
+        <div class="contact-address">
+          <div class="contact-address-item">
+            <span><i class="fas fa-envelope"></i></span>
+            <span><b>ncuti60@gmail.com</b></span>
+          </div>
+
+          <div class="contact-address-item">
+            <span><i class="fas fa-phone"></i></span>
+            <span><b>(250) 783 573 335</b></span>
+          </div>
+
+          <div class="contact-address-item">
+            <span><i class="fas fa-map-marker-alt"></i></span>
+            <span><b>Kigali, Rwanda</b></span>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <div class="contact-form-input">
+            <span><label for="name">Name</label></span>
+            <span><input type="text" name="" id=""></span>
+          </div>
+
+          <div class="contact-form-input">
+            <span><label for="name">Email</label></span>
+            <span><input type="email" name="" id=""></span>
+          </div>
+
+          <div class="contact-form-input">
+            <span><label for="name">Message</label></span>
+            <span><textarea name="" id="" cols="30" rows="5"></textarea></span>
+          </div>
+
+          <div class="contact-form-input">
+            <button type="submit">Send</button>
+          </div>
+        </div>
+
+      </div> -->
+
+      <div class="ct-items" id="contacts">
+        <div class="ct-content">
+            <div class="title"><h3>Contact me.</h3></div>
+            <div class="ct-content-text">
+                <h3>For any enquiries, <br> don’t hesitate to call me 👉<br>Or use the addresse below</h3>
             </div>
-            <div class="navbar-list">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Works</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Login</a></li>
-                </ul>
+
+            <div class="contact-address">
+              <div class="contact-address-item">
+                <span><i class="fas fa-envelope"></i></span>
+                <span><b>ncuti60@gmail.com</b></span>
+              </div>
+    
+              <div class="contact-address-item">
+                <span><i class="fas fa-phone"></i></span>
+                <span><b>(250) 783 573 335</b></span>
+              </div>
+    
+              <div class="contact-address-item">
+                <span><i class="fas fa-map-marker-alt"></i></span>
+                <span><b>Kigali, Rwanda</b></span>
+              </div>
+            </div>
+
+        </div>
+        <div class="ct-form">
+            <div class="ct-form-input">
+                <label for="name">Name</label>
+                <input type="text" name="Name" id="Name">
+            </div>
+
+            <div class="ct-form-input">
+                <label for="email">Email</label>
+                <input type="email" name="Email" id="Email">
+            </div>
+
+            <div class="ct-form-input">
+                <label for="message">Message</label>
+                <textarea name="message" id="" cols="20" rows="6"></textarea>
+            </div>
+
+            <div class="ct-form-input">
+               <button type="submit">Submit</button>
             </div>
         </div>
-        <div class="land-content">
-            <img src="img/photo.png" alt="" srcset="">
-            <h1>I'm Ncuti Xavier</h1>
-            <p>a software engineer</p>
-        </div>
-        <div class="go-down-btn"><i class="fas fa-angle-double-down"></i></div>
-        <div class="clouds">
-            <div class="cloud_1"><i class="fas fa-cloud"></i></div>
-            <div class="cloud_2"><i class="fas fa-cloud"></i></div>
+    </div>
+
+      <div class="footer">
+        <div class="ft-items">
+            <div class="ft-item"><p>ncutixavier &copy 2020 | All rights reserved</p></div>
+            <hr class="footer-line">
+            <div class="ft-item-sm">
+                <span><a href="https://web.facebook.com/ndagijimana.xavier.1" target="_blank"><i class="fab fa-facebook-f"></i></a></span>
+                <span><a href="https://twitter.com/ncutixavier" target="_blank"><i class="fab fa-twitter"></i></a></span>
+                <span><a href="http://linkedin.com/in/ncuti-xavier-979284197" target="_blank"><i class="fab fa-linkedin-in"></i></a></span>
+                <span><a href="https://www.instagram.com/ncutixavier/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></span>
+                <span><a href="https://github.com/ncutixavier/" target="_blank"><i class="fab fa-github"></i></a></span>
+            </div>
         </div>
     </section>
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>
