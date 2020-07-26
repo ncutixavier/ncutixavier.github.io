@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/nx.png" type="image/png" />
     <title>ncutixavier | Portifolio</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Bellefair|Cormorant Garamond|Caveat|Roboto"
+      href="https://fonts.googleapis.com/css?family=Bellefair|Caveat|Roboto|Work Sans|Overlock|Telex|Poppins"
       rel="stylesheet"
     />
     <script
@@ -15,19 +16,20 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <section class="landing-page" id="home">
+    <!-- <section class="container"> -->
+    <section id="home" class="home">
       <div class="navbar">
         <div class="navbar-logo">
           <img src="img/nx.png" alt="" srcset="" />
         </div>
         <div class="navbar-list">
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Works</a></li>
-            <li><a href="">Blog</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="#contacts">Contact</a></li>
-            <li><a href="">Login</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#work">Works</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="" class="login">Login</a></li>
           </ul>
         </div>
       </div>
@@ -36,129 +38,284 @@
         <h1>I'm Ncuti Xavier</h1>
         <p>a software engineer</p>
       </div>
-      <div class="go-down-btn"><i class="fas fa-angle-double-down"></i></div>
+      <div class="go-down-btn"><a href="#about"><i class="fas fa-angle-double-down"></i></a></div>
       <div class="clouds">
         <div class="cloud_1"><i class="fas fa-cloud"></i></div>
         <div class="cloud_2"><i class="fas fa-cloud"></i></div>
       </div>
+      <div class="goUpBtn"><a href="#home"><i class="fas fa-arrow-up"></i></a></div>
     </section>
-    <section class="contact" id="contact">
-       <div class="subscribe-page">
-        <div class="subscribe-form">
-          <span><i class="fas fa-envelope"></i></span>
-          <span> <h1>Join My Mailing List</h1></span>
-          <span
-            ><input
-              type="email"
-              name=""
-              id="email"
-              placeholder="example@example.com"
-          /></span>
-          <span><button type="submit">Subscribe</button></span>
+
+    <section class="about" id="about">
+      <div class="greet-user">
+        <div class="greet-image"><i class="far fa-handshake"></i></div>
+        <div class="greet-title">Hello.</div>
+        <div class="greet-text">
+          <p>
+            I'm a software engineer / developer based in Kigali, Rwanda. I have
+            a passion for software development and I like to work with others to
+            solve the real world problems.
+          </p>
         </div>
       </div>
-<!--
+
+      <div class="about-me">
+        <div class="greet-user">
+          <div class="greet-image">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="greet-title">What can I do?</div>
+          <div class="greet-text">
+            <p>
+              I'm a developer so I know how to create web based application from
+              scratch. My goal is to be focused and help you to convey the
+              message you want to send.
+            </p>
+          </div>
+        </div>
+        <div class="greet-user">
+          <div class="greet-image">
+            <i class="fab fa-hire-a-helper"></i>
+          </div>
+          <div class="greet-title">What I can help?</div>
+          <div class="greet-text">
+            <p>
+              I'm currently available for freelancer work. If you have a project
+              that you want to get started, think you need my help with
+              something or just fancy saying hey, then
+              <a href="mailto:ncuti60@gmail.com">get in touch.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skillAndexperience">
+        <div class="greet-title">Skills & Experience</div>
+        <div class="sk-exp">
+          <div class="skills">
+            <div class="skill">
+                <span>HTML5</span>
+                <div class="line">
+                    <div class="l1 percent">95%</div>
+                </div><br>
+            </div>
+        
+            <div class="skill">
+                <span>CSS3</span>
+                <div class="line">
+                    <div class="l2 percent">85%</div>
+                </div><br>
+            </div>
+          
+            <div class="skill">
+                <span>Figma (Prototype)</span>
+                <div class="line">
+                    <div class="l2 percent">85%</div>
+                </div><br>
+            </div>
+          
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="line">
+                    <div class="l3 percent">75%</div>
+                </div><br>
+            </div>
+          
+            <div class="skill">
+                <span>Python</span>
+                <div class="line">
+                    <div class="l4 percent">75%</div>
+                </div><br>
+            </div>
+
+            <div class="skill">
+              <span>Django</span>
+              <div class="line">
+                  <div class="l4 percent">75%</div>
+              </div><br>
+          </div>
+        </div>
+
+        <div class="experience">
+          <div class="exp-title">Experience</div>
+          <div class="exp-text">
+            <p>
+              I'm software developer with passion of building beautiful things from scratch. I have been building website since 2017 and also I'm learning Computer Engineering in bachelor Degree.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    
+
+    <section class="work" id="work">
+      <div class="title">Previous Projects</div>
+      <div class="projects">
+        
+          
+        <div class="project">
+          <div class="proj-img">
+            <span>AI Image Classifier</span>
+            <!-- <img src="img/messenger.png" alt="Messenger-web" srcset=""> -->
+          </div>
+          <div class="proj-title">Image Classifier with pytorch</div>
+          <div class="proj-desc">
+            <p>This is final Project for Udacity's AI Programming with Python Nanodegree program. In this project, students first develop code....</p>
+            <p>
+              <span><b>Language: </b></span>
+              <span>Python, Pytorch</span>
+            </p>
+          </div>
+          <div class="proj-btn">
+            <button type="submit">Find More</button>
+          </div>
+        </div>
+        <div class="project">
+          <div class="proj-img">
+            <img src="img/messenger.png" alt="Messenger-web" srcset="">
+          </div>
+          <div class="proj-title">Messenger Website</div>
+          <div class="proj-desc">
+            <p>Messenger-Rwanda is company located in Rwanda. We help people who want to deliver message in difference province of Rwanda.</p>
+            <p>
+              <span><b>Language: </b></span>
+              <span>HTML5, CSS3, Javascript</span>
+            </p>
+          </div>
+          <div class="proj-btn">
+            <button type="submit">Find More</button>
+          </div>
+        </div>
+        <div class="project">
+          <div class="proj-img">
+            <span>Movie Rating API</span>
+            <!-- <img src="img/messenger.png" alt="Messenger-web" srcset=""> -->
+          </div>
+          <div class="proj-title">Movie Rating API</div>
+          <div class="proj-desc">
+            <p>This project was about to design movie rating api where you can view list of movies and rate them depend on your choice.</p>
+            <p>
+              <span><b>Language: </b></span>
+              <span>Python, Django</span>
+            </p>
+          </div>
+          <div class="proj-btn">
+            <button type="submit">Find More</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe-page">
+      <div class="subscribe-form">
+        <span><i class="fas fa-envelope"></i></span>
+        <span><h1>Join My Mailing List</h1></span>
+        <span
+          ><input
+            type="email"
+            name=""
+            id="email"
+            placeholder="example@example.com"
+        /></span>
+        <span><button type="submit">Subscribe</button></span>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="title">HAVE SOME ENQUIRIES?</div>
+      <div class="contact-address">
+        <div class="contact-address-item">
+          <span><i class="fas fa-envelope"></i></span>
+          <span><b>ncuti60@gmail.com</b></span>
+        </div>
+
+        <div class="contact-address-item">
+          <span><i class="fas fa-phone"></i></span>
+          <span><b>(250) 783 573 335</b></span>
+        </div>
+
+        <div class="contact-address-item">
+          <span><i class="fas fa-map-marker-alt"></i></span>
+          <span><b>Kigali, Rwanda</b></span>
+        </div>
+      </div>
       <div class="contact-page">
-        <div class="contact-address">
-          <div class="contact-address-item">
-            <span><i class="fas fa-envelope"></i></span>
-            <span><b>ncuti60@gmail.com</b></span>
-          </div>
-
-          <div class="contact-address-item">
-            <span><i class="fas fa-phone"></i></span>
-            <span><b>(250) 783 573 335</b></span>
-          </div>
-
-          <div class="contact-address-item">
-            <span><i class="fas fa-map-marker-alt"></i></span>
-            <span><b>Kigali, Rwanda</b></span>
-          </div>
+        <div class="contact-img">
+          <img src="img/letter.svg" alt="" srcset="" />
         </div>
 
         <div class="contact-form">
-          <div class="contact-form-input">
-            <span><label for="name">Name</label></span>
-            <span><input type="text" name="" id=""></span>
+          <div class="ct-form-input">
+            <label for="name">Name</label>
+            <input type="text" name="Name" id="Name" placeholder="Name..." />
           </div>
 
-          <div class="contact-form-input">
-            <span><label for="name">Email</label></span>
-            <span><input type="email" name="" id=""></span>
+          <div class="ct-form-input">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="Email"
+              id="Email"
+              placeholder="Email..."
+            />
           </div>
 
-          <div class="contact-form-input">
-            <span><label for="name">Message</label></span>
-            <span><textarea name="" id="" cols="30" rows="5"></textarea></span>
+          <div class="ct-form-input">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id=""
+              cols="20"
+              rows="6"
+              placeholder="Message..."
+            ></textarea>
           </div>
 
-          <div class="contact-form-input">
-            <button type="submit">Send</button>
+          <div class="ct-form-input">
+            <button type="submit">Submit</button>
           </div>
         </div>
-
-      </div> -->
-
-      <div class="ct-items" id="contacts">
-        <div class="ct-content">
-            <div class="title"><h3>Contact me.</h3></div>
-            <div class="ct-content-text">
-                <h3>For any enquiries, <br> don’t hesitate to call me 👉<br>Or use the addresse below</h3>
-            </div>
-
-            <div class="contact-address">
-              <div class="contact-address-item">
-                <span><i class="fas fa-envelope"></i></span>
-                <span><b>ncuti60@gmail.com</b></span>
-              </div>
-    
-              <div class="contact-address-item">
-                <span><i class="fas fa-phone"></i></span>
-                <span><b>(250) 783 573 335</b></span>
-              </div>
-    
-              <div class="contact-address-item">
-                <span><i class="fas fa-map-marker-alt"></i></span>
-                <span><b>Kigali, Rwanda</b></span>
-              </div>
-            </div>
-
-        </div>
-        <div class="ct-form">
-            <div class="ct-form-input">
-                <label for="name">Name</label>
-                <input type="text" name="Name" id="Name">
-            </div>
-
-            <div class="ct-form-input">
-                <label for="email">Email</label>
-                <input type="email" name="Email" id="Email">
-            </div>
-
-            <div class="ct-form-input">
-                <label for="message">Message</label>
-                <textarea name="message" id="" cols="20" rows="6"></textarea>
-            </div>
-
-            <div class="ct-form-input">
-               <button type="submit">Submit</button>
-            </div>
-        </div>
-    </div>
-
-      <div class="footer">
-        <div class="ft-items">
-            <div class="ft-item"><p>ncutixavier &copy 2020 | All rights reserved</p></div>
-            <hr class="footer-line">
-            <div class="ft-item-sm">
-                <span><a href="https://web.facebook.com/ndagijimana.xavier.1" target="_blank"><i class="fab fa-facebook-f"></i></a></span>
-                <span><a href="https://twitter.com/ncutixavier" target="_blank"><i class="fab fa-twitter"></i></a></span>
-                <span><a href="http://linkedin.com/in/ncuti-xavier-979284197" target="_blank"><i class="fab fa-linkedin-in"></i></a></span>
-                <span><a href="https://www.instagram.com/ncutixavier/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></span>
-                <span><a href="https://github.com/ncutixavier/" target="_blank"><i class="fab fa-github"></i></a></span>
-            </div>
-        </div>
+      </div>
     </section>
+    <section class="footer">
+      <div class="ft-items">
+        <div class="ft-item">
+          <p>ncutixavier &copy 2020 | All rights reserved</p>
+        </div>
+        <hr class="footer-line" />
+        <div class="ft-item-sm">
+          <span
+            ><a
+              href="https://web.facebook.com/ndagijimana.xavier.1"
+              target="_blank"
+              ><i class="fab fa-facebook-f"></i></a
+          ></span>
+          <span
+            ><a href="https://twitter.com/ncutixavier" target="_blank"
+              ><i class="fab fa-twitter"></i></a
+          ></span>
+          <span
+            ><a
+              href="http://linkedin.com/in/ncuti-xavier-979284197"
+              target="_blank"
+              ><i class="fab fa-linkedin-in"></i></a
+          ></span>
+          <span
+            ><a
+              href="https://www.instagram.com/ncutixavier/?hl=en"
+              target="_blank"
+              ><i class="fab fa-instagram"></i></a
+          ></span>
+          <span
+            ><a href="https://github.com/ncutixavier/" target="_blank"
+              ><i class="fab fa-github"></i></a
+          ></span>
+        </div>
+      </div>
+    </section>
+    <!-- </section> -->
     <script src="js/script.js"></script>
   </body>
 </html>
