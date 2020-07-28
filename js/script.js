@@ -79,15 +79,15 @@ document.addEventListener('keyup', function (e) {
 function togglePopup() {
     document.getElementById("popup-1").classList.toggle("active");
 
-    const html = '<div class="overlay"></div><div class="content"><div class="close-btn" onclick="togglePopup()">&times;</div>' +
+    const html = '<div class="close-btn" onclick="togglePopup()">&times;</div>' +
         '<div class="content-text"><h1>Hi %Name%,</h1>' +
-        '<p>Thank you for contacting me, I’ll get back to you shortly…</p></div></div>'
+        '<p>Thank you for contacting me, I’ll get back to you shortly…</p></div>'
 
     //2. replace placeholders with actual data
     const newHtml = html.replace('%Name%', userName.value)
 
     //3. Insert html into DOM 
-    document.querySelector(".popup").insertAdjacentHTML('beforeend', newHtml)
+    document.querySelector(".content").insertAdjacentHTML('beforeend', newHtml)
 }
 
 function clearFields() {
