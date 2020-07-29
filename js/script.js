@@ -63,7 +63,7 @@ const nameIsValid = name => {
     return /^[a-zA-Z\s]+$/.test(name);
 }
 
-document.addEventListener('click', validation)
+submitBtn.addEventListener('click', validation)
 
 document.addEventListener('keyup', function (e) {
     if (e.keyCode === 13 && e.which == 13) {
