@@ -1,5 +1,5 @@
 window.onscroll = function () {
-    if (document.body.scrollTop >= 300 || document.documentElement.scrollTop >= 300) {
+    if (document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100) {
         document.querySelector('.navbar').classList.add("white-background")
         document.querySelector('.goUpBtn').style.display = "block"
     } else {
@@ -9,50 +9,62 @@ window.onscroll = function () {
 };
 
 
+const workBtn =  document.querySelector(".workPage")
+workBtn.addEventListener('click', function(){
+    document.querySelector(".work").scrollIntoView({
+        behavior: "smooth"
+    })
+})
+
+
 const submitBtn = document.querySelector("#sendBtn")
 
-var userName = document.querySelector("#name")
-var userEmail = document.querySelector("#e-mail")
-var userMessage = document.querySelector("#message")
+const userName = document.querySelector("#name")
+const userEmail = document.querySelector("#e-mail")
+const userMessage = document.querySelector("#message")
 
-const validation = () => {
-    // e.preventDefault()
-    var nameErr = document.querySelector(".nameErr")
-    var emailErr = document.querySelector(".emailErr")
-    var messageErr = document.querySelector(".messageErr")
+
+const validation = (e) => {
+
+    e.preventDefault()
+    let nameErr = document.querySelector(".nameErr")
+    let emailErr = document.querySelector(".emailErr")
+    let messageErr = document.querySelector(".messageErr")
 
     if (!nameIsValid(userName.value)) {
-        nameErr.innerHTML = "Please enter a valid name"
+        nameErr.style.display = "inline"
         userName.focus();
         return false;
     } else {
-        nameErr.innerHTML = ""
-        // nameErr.display = "none"
+        nameErr.style.display = "none"
     }
 
     if (!emailIsValid(userEmail.value)) {
-        emailErr.innerHTML = "Please enter a valid email address"
+        emailErr.style.display = "inline"
         userEmail.focus();
         return false;
     } else {
-        emailErr.innerHTML = ""
+        emailErr.style.display = "none"
     }
 
-    if (userMessage.value === "") {
-        messageErr.innerHTML = "Please enter your message"
+    if (!nameIsValid(userMessage.value)) {
+        messageErr.style.display = "inline"
         userMessage.focus()
         return false
     } else {
-        messageErr.innerHTML = ""
+        messageErr.style.display = "none"
     }
 
     if ((nameErr || emailErr || messageErr) == true) {
         return false
+
     } else {
+
         togglePopup()
         clearFields()
+        return true
     }
-
+    // return true
 }
 
 const emailIsValid = email => {
@@ -65,18 +77,14 @@ const nameIsValid = name => {
 
 submitBtn.addEventListener('click', validation)
 
-document.addEventListener('keyup', function (e) {
+document.addEventListener('keypress', function (e) {
     if (e.keyCode === 13 && e.which == 13) {
         validation()
     }
-
-    // if(e.keyCode === 9 && e.which == 9){
-    //     validation()
-    // }
 })
 
 
-function togglePopup() {
+const togglePopup = () => {
     document.getElementById("popup-1").classList.toggle("active");
 
     const html = '<div class="close-btn" onclick="togglePopup()">&times;</div>' +

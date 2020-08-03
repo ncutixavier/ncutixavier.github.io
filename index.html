@@ -6,7 +6,7 @@
     <link rel="icon" href="img/nx.png" type="image/png" />
     <title>ncutixavier | Portifolio</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Bellefair|Caveat|Roboto|Work Sans|Overlock|Telex|Poppins"
+      href="https://fonts.googleapis.com/css?family=Bellefair|Open Sans|Caveat|Roboto|Work Sans|Overlock|Telex|Poppins"
       rel="stylesheet"
     />
     <script
@@ -20,23 +20,21 @@
     <section id="home" class="home">
       <div class="navbar">
         <div class="navbar-logo">
-          <img src="img/nx.png" alt="" srcset="" />
+          <a href="#home"><img src="img/nx.png" alt="" srcset="" /></a>
         </div>
         <div class="navbar-list">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#work">Works</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="" class="login">Login</a></li>
-          </ul>
+            <span class="navbar-list-item homePage"><a href="#home">Home</a></span>
+            <span class="navbar-list-item workPage"><a href="#work">Works</a></span>
+            <span class="navbar-list-item blogPage"><a href="blog.html">Blog</a></span>
+            <span class="navbar-list-item aboutPage"><a href="#about">About</a></span>
+            <span class="navbar-list-item contactPage"><a href="#contact">Contact</a></span>
+            <span class="navbar-list-item loginPage"><a href="" class="login">Login</a></span>
         </div>
       </div>
       <div class="land-content">
-        <img src="img/photo.png" alt="" srcset="" />
-        <h1>I'm Ncuti Xavier</h1>
-        <p>a software engineer</p>
+        <span><img src="img/photo.png" alt="" srcset="" /></span>
+        <span><h1>I'm Ncuti Xavier</h1></span>
+        <span><p>a software engineer</p></span>
       </div>
       <div class="go-down-btn"><a href="#about"><i class="fas fa-angle-double-down"></i></a></div>
       <div class="clouds">
@@ -47,22 +45,24 @@
     </section>
 
     <section class="about" id="about">
-      <div class="greet-user">
-        <div class="greet-image"><i class="far fa-handshake"></i></div>
-        <div class="greet-title">Hello.</div>
-        <div class="greet-text">
-          <p>
-            I'm a software engineer / developer based in Kigali, Rwanda. I have
-            a passion for software development and I like to work with others to
-            solve the real world problems.
-          </p>
+      <div class="greeting-users">
+        <div class="greet-user">
+          <div class="greet-image"><i class="far fa-handshake"></i></div>
+          <div class="greet-title">Hello.</div>
+          <div class="greet-text">
+            <p>
+              I'm a software engineer / developer based in Kigali, Rwanda. I have
+              a passion for software development and I like to work with others to
+              solve the real world problems.
+            </p>
+          </div>
         </div>
       </div>
 
       <div class="about-me">
         <div class="greet-user">
           <div class="greet-image">
-            <i class="fas fa-briefcase"></i>
+            <i class="fas fa-tools"></i>
           </div>
           <div class="greet-title">What can I do?</div>
           <div class="greet-text">
@@ -137,18 +137,18 @@
         </div>
 
         <div class="experience">
-          <div class="exp-title">Experience</div>
-          <div class="exp-text">
-            <p>
-              I'm software developer with passion of building beautiful things from scratch. I have been building website since 2017 and also I'm learning Computer Engineering in bachelor Degree.
-            </p>
+          <div class="experience-user">
+            <div class="greet-image"><i class="fas fa-briefcase"></i></div>
+            <div class="greet-title">Experience.</div>
+            <div class="greet-text">
+              <p>
+                I am a software developer who is passionate about building the best stuff from scratch. I started building a website from 2017 and I'm now studying Computer Engineering with a Bachelor Degree.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-
     </section>
-
-    
 
     <section class="work" id="work">
       <div class="title">Previous Projects</div>
@@ -157,8 +157,7 @@
           
         <div class="project">
           <div class="proj-img">
-            <span>AI Image Classifier</span>
-            <!-- <img src="img/messenger.png" alt="Messenger-web" srcset=""> -->
+            <img src="img/image_classifier.png" alt="Messenger-web" srcset="">
           </div>
           <div class="proj-title">Image Classifier with pytorch</div>
           <div class="proj-desc">
@@ -169,7 +168,7 @@
             </p>
           </div>
           <div class="proj-btn">
-            <button type="submit">Find More</button>
+            <button type="submit"><a href="https://github.com/ncutixavier/AI-Image-Classifier-Project-Using-Pytorch" target="_blank">Find More</a></button>
           </div>
         </div>
         <div class="project">
@@ -185,13 +184,12 @@
             </p>
           </div>
           <div class="proj-btn">
-            <button type="submit">Find More</button>
+            <button type="submit"><a href="https://nx-messenger.netlify.com/" target="_blank">Find More</a></button>
           </div>
         </div>
         <div class="project">
           <div class="proj-img">
-            <span>Movie Rating API</span>
-            <!-- <img src="img/messenger.png" alt="Messenger-web" srcset=""> -->
+            <img src="img/movie_rater.png" alt="Messenger-web" srcset="">
           </div>
           <div class="proj-title">Movie Rating API</div>
           <div class="proj-desc">
@@ -202,7 +200,7 @@
             </p>
           </div>
           <div class="proj-btn">
-            <button type="submit">Find More</button>
+            <button type="submit"><a href="https://github.com/ncutixavier/movie-rate-api-django" target="_blank">Find More</a></button>
           </div>
         </div>
       </div>
@@ -212,11 +210,12 @@
       <div class="subscribe-form">
         <span><i class="fas fa-envelope"></i></span>
         <span><h1>Join My Mailing List</h1></span>
+        <!-- <span class="emailErr"></span> -->
         <span
           ><input
             type="email"
             name=""
-            id="email"
+            id="e--mail"
             placeholder="example@example.com"
         /></span>
         <span><button type="submit">Subscribe</button></span>
@@ -251,8 +250,8 @@
           <div class="contact-form">
             <div class="ct-form-input">
               <label for="name">Name</label>
-              <input type="text" name="Name" id="name" placeholder="Name..." autocomplete="off"/>
-              <span class="nameErr error"></span>
+              <input type="text" name="Name" id="name" class="form_input" placeholder="Name..." autocomplete="off"/>
+              <span class="nameErr error">Please Enter a valid name</span>
             </div>
   
             <div class="ct-form-input">
@@ -260,10 +259,11 @@
               <input type="email"
                 name="Email"
                 id="e-mail"
+                class="form_input"
                 placeholder="Email..."
                 autocomplete="off"
               />
-              <span class="emailErr error"></span>
+              <span class="emailErr error">Please Enter a valid email</span>
             </div>
   
             <div class="ct-form-input">
@@ -273,10 +273,11 @@
                 id="message"
                 cols="20"
                 rows="6"
+                class="form_input"
                 placeholder="Message..."
 
               ></textarea>
-              <span class="messageErr error"></span>
+              <span class="messageErr error">Please Enter a valid message</span>
             </div>
   
             <div class="ct-form-input">
@@ -296,7 +297,6 @@
         </div>
       </div>
       
-      <!-- <button onclick="togglePopup()">Show Popup</button> -->
     </section>
     <section class="footer">
       <div class="ft-items">
