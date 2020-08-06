@@ -24,8 +24,9 @@ const addMessage = (name, email, message) => {
     })
 }
 
-const workBtn = document.querySelector(".workPage")
-workBtn.addEventListener('click', function () {
+const workBtn =  document.querySelector(".workPage")
+workBtn.addEventListener('click', function(){
+
     document.querySelector(".work").scrollIntoView({
         behavior: "smooth"
     })
@@ -75,6 +76,7 @@ const validation = (e) => {
 
     } else {
         addMessage(userName.value,userEmail.value,userMessage.value)
+
         togglePopup()
         clearFields()
         return true
