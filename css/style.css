@@ -531,8 +531,8 @@ span > input {
   padding: 1.3rem 1.5rem;
   outline: none;
   color: #0a65d0;
-  border: none;
-  /* border: 1px solid rgb(40, 180, 40); */
+  outline: none;
+  border: 1px solid #000;
   border-radius: 3rem;
 }
 

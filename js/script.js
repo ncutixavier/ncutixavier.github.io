@@ -8,9 +8,25 @@ window.onscroll = function () {
     }
 };
 
+//check if it works
+db.collection('messages').get().then((msg) => {
+    msg.docs.map(doc => console.log(doc.data()))
+})
+
+
+
+//Adding messages in firebase
+const addMessage = (name, email, message) => {
+    db.collection('messages').add({
+        name: name,
+        email: email,
+        message: message
+    })
+}
 
 const workBtn =  document.querySelector(".workPage")
 workBtn.addEventListener('click', function(){
+
     document.querySelector(".work").scrollIntoView({
         behavior: "smooth"
     })
@@ -47,7 +63,7 @@ const validation = (e) => {
         emailErr.style.display = "none"
     }
 
-    if (!nameIsValid(userMessage.value)) {
+    if (userMessage.value === "") {
         messageErr.style.display = "inline"
         userMessage.focus()
         return false
@@ -59,6 +75,7 @@ const validation = (e) => {
         return false
 
     } else {
+        addMessage(userName.value,userEmail.value,userMessage.value)
 
         togglePopup()
         clearFields()
