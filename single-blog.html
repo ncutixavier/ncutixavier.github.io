@@ -11,15 +11,16 @@
     />
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-admin.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
     <script
       src="https://kit.fontawesome.com/ef63f52b34.js"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard-style.css" />
   </head>
   <body>
-    <section id="home" class="home">
+    <section id="home" class="home" style="display: none;">
       <div class="navbar white-background">
         <div class="navbar-logo">
           <a href="#home"><img src="img/logo.svg" alt="" srcset="" /></a>
@@ -41,68 +42,74 @@
             ><a href="index.html#contact">Contact</a></span
           >
           <span class="navbar-list-item loginPage"
-            ><a href="login.html" class="login">Login</a></span
+            ><a href="" class="login">Login</a></span
           >
         </div>
       </div>
     </section>
 
-    <section class="blog-title">
-      <h1>Blog</h1>
-    </section>
-
-    <section class="articles">
-      <!-- <div class="article">
-          <img class="article-img" src="https://live.staticflickr.com/4344/36806413445_b8b774bae6_z.jpg" alt="code-editor" srcset="">
-          <div class="article-title"><a href="" >Best Code Editors for Developer</a></div>
-          <div class="article-writer">By Ncuti Xavier, 8/1/2020</div>
-          <p class="article-desc">It is always exciting for developers from all over the world whenever they get to showcase their best code editor at computer expos and tech conferences. On that note when we talk about free code editors</p>
-      </div> -->
-    </section>
     <section class="single-blog">
-      <div class="back-to-blog"><a href="blog.html">Back to Blog</a></div>
-      <div class="single-blog-container"></div>
-      <div class="single-blog-comment-title"></div>
-      <div class="single-blog-comments"></div>
-      <div class="single-blog-btn"></div>
-    </section>
-    <!-- <div class="single-article-comment"></div> -->
+      <div class="single-blog-container">
+        <div class="back-to-blog"><a href="blog.html">Back to Blog</a></div>
 
-    <div class="popup" id="popup-1">
-      <div class="overlay"></div>
-      <div class="content">
-        <div class="close-btn" onclick="togglePopup()">&times;</div>
-        <div class="form">
-          <!-- <div class="error">All Fields are required</div> -->
-          <div class="form-input">
-            <label for="">Name</label>
-            <input
-              type="text"
-              name="Name"
-              id="comWriter"
-              placeholder="Your Name"
-              required
-            />
-          </div>
+        <div class="single-blog-title">
+          <h1>Best Code Editors for developers in 2020</h1>
+          <h6>By Ncuti Xavier, Aug 10, 2020</h6>
+        </div>
 
-          
-          <div class="form-input">
-            <label for="">Article</label>
-            <textarea
-              name="article"
-              id="comArticle"
-              cols="30"
-              rows="2"
-              placeholder="Article"
-              required
-            ></textarea>
-          </div>
-          <div class="form-input">
-            <button type="submit" id="save-comment-btn">Comment</button>
-          </div>
+        <div class="single-blog-article">
+          <img
+            src="https://cdn.mos.cms.futurecdn.net/a2U6bn6dhqRpoTjtjbQhdB-650-80.jpg.webp"
+            alt=""
+            srcset=""
+          />
+          <p>
+            Finding the best code editor for your workflow can have a huge
+            impact on your productivity. There's no shortage of code editors on
+            the market and selecting the one that is right for your developer
+            needs can transform your workflow. Typically, developers do not fit
+            into a single type, and the same goes for code editors. While one
+            editor might work for one developer it might not suit another. So it
+            is critical you take some time to figure out which is the best code
+            editor for you.<br /><br />
+            A best-fit code editor will make any developer more efficient at
+            writing code. It will be a personal assistant helping examine code
+            for less mistakes and show where edits need to be made. And, just as
+            importantly, it will need to be customisable, allowing for the
+            creation of a custom UI and an intuitive user experience. This is
+            critical as you will most likely be looking at your code editor
+            screen for hours on end.
+          </p>
         </div>
       </div>
-    </div>
+
+      <div class="single-blog-comment-title">
+        <h1>Comments</h1>
+      </div>
+      <div class="single-blog-comments">
+        <div class="comment">
+          <h5>Muhire Arsene</h5>
+          <p>Woooow 👏👏👏 . This is amazinggggggg</p>
+        </div>
+        <hr />
+        <div class="comment">
+          <h5>Muhire Arsene</h5>
+          <p>Woooow 👏👏👏 . This is amazinggggggg</p>
+        </div>
+        <hr />
+      </div>
+      <div class="single-blog-btn">
+        <button>Leave Your Comment</button>
+      </div>
+
+      <!-- <div class="recommended">
+        <div class="single-blog-title">
+          <h1>Recommended Articles</h1>
+        </div>
+        <div class="articles"></div>
+      </div> -->
+    </section>
+
     <section class="blog-subscribe">
       <p>
         Like our blog? Get the latest stories delivered straight to your inbox.
@@ -152,6 +159,24 @@
       </div>
     </section>
     <!-- </section> -->
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCDC_Fr59RYH5mFtMT2qES1SaLm2uejH0A",
+        authDomain: "personal-website-664ca.firebaseapp.com",
+        databaseURL: "https://personal-website-664ca.firebaseio.com",
+        projectId: "personal-website-664ca",
+        storageBucket: "personal-website-664ca.appspot.com",
+        messagingSenderId: "138869735689",
+        appId: "1:138869735689:web:2cdcfd8a88977e022453d8",
+        measurementId: "G-N5VFQ4H262",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const db = firebase.firestore();
+    </script>
+
     <script src="js/blog-script.js"></script>
   </body>
 </html>
