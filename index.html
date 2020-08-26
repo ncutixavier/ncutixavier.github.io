@@ -6,7 +6,7 @@
     <link rel="icon" href="img/logo-dark.svg" type="image/png" />
     <title>ncutixavier | Portifolio</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Josefin Slab|Open Sans|Caveat|Reem Kufi|Work Sans|Overlock|Telex|Poppins"
+      href="https://fonts.googleapis.com/css?family=Josefin Slab|Open Sans|Caveat|Reem Kufi|Work Sans|Overlock|Mallanna|Poppins|Alata|Roboto"
       rel="stylesheet"
     />
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
@@ -16,6 +16,7 @@
           crossorigin="anonymous"
         ></script>
       <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/responsive-style.css">
   </head>
   <body>
     <!-- <section class="container"> -->
@@ -23,14 +24,14 @@
       <div class="navbar">
         <div class="navbar-logo">
           <a href="#home"><img src="img/logo.svg" alt="" srcset="" /></a>
+          <div class="nav-bar"><i class="fas fa-bars"></i></div>
         </div>
         <div class="navbar-list">
-            <span class="navbar-list-item homePage"><a href="#home">Home</a></span>
-            <span class="navbar-list-item workPage"><a href="#work">Works</a></span>
-            <span class="navbar-list-item blogPage"><a href="blog.html">Blog</a></span>
-            <span class="navbar-list-item aboutPage"><a href="#about">About</a></span>
-            <span class="navbar-list-item contactPage"><a href="#contact">Contact</a></span>
-            <span class="navbar-list-item loginPage"><a href="login.html" class="login">Login</a></span>
+            <a href="#home"><span class="navbar-list-item homePage">Home</span></a>
+            <a href="#work"><span class="navbar-list-item workPage">Works</span></a>
+            <a href="blog.html"><span class="navbar-list-item blogPage">Blog</span></a>
+            <a href="#about"><span class="navbar-list-item aboutPage">About</span></a>
+            <a href="#contact"><span class="navbar-list-item contactPage">Contact</span></a>
         </div>
       </div>
       <div class="land-content">
@@ -39,13 +40,13 @@
         <span><p>a software engineer</p></span>
         <span class="hire-btn"><a href="#contact">Hire Me</i></a></span>
       </div>
-      <div class="goUpBtn"><a href="#home"><i class="fas fa-arrow-up"></i></a></div>
+      <div class="goUpBtn"><i class="fas fa-arrow-up"></i></div>
     </section>
 
     <section id="about">
       <div class="about">
         <div class="greeting-users">
-          <div class="greet-user">
+          <div class="greet-user greet-user-hello">
             <div class="greet-image"><i class="far fa-handshake"></i></div>
             <div class="greet-title">Hello.</div>
             <div class="greet-text">
@@ -119,6 +120,13 @@
                       <div class="l3 percent">75%</div>
                   </div><br>
               </div>
+
+              <div class="skill">
+                <span>Node JS</span>
+                <div class="line">
+                    <div class="l3 percent">75%</div>
+                </div><br>
+            </div>
             
               <div class="skill">
                   <span>Python</span>
@@ -159,9 +167,9 @@
           <div class="proj-img">
             <img src="img/image_classifier.png" alt="Messenger-web" srcset="">
           </div>
-          <div class="proj-title">Image Classifier with pytorch</div>
+          <div class="proj-title">Image Classifier</div>
           <div class="proj-desc">
-            <p>This is final Project for Udacity's AI Programming with Python Nanodegree program. In this project, students first develop code....</p>
+            <p>This is final Project for Udacity's AI Programming with Python Nanodegree program. In this project, students first develop.</p>
             <p>
               <span><b>Language: </b></span>
               <span>Python, Pytorch</span>
@@ -245,19 +253,20 @@
           <img src="img/letter.svg" alt="" srcset="" />
         </div>
 
-        <!-- <form onsubmit="return validateForm()"> -->
+      
+      <form id="gform" method="POST" data-email="from_email@example.com" action="https://script.google.com/macros/s/AKfycbzlmpowxdl7JOuVjlujVfTOO2wpbBGE1vYgj7rw/exec">
           
           <div class="contact-form">
             <div class="ct-form-input">
               <label for="name">Name</label>
-              <input type="text" name="Name" id="name" class="form_input" placeholder="Name..." autocomplete="off"/>
+              <input type="text" name="name" id="name" class="form_input" placeholder="Name..." autocomplete="off"/>
               <span class="nameErr error">Please Enter a valid name</span>
             </div>
   
             <div class="ct-form-input">
               <label for="email">Email</label>
               <input type="email"
-                name="Email"
+                name="email"
                 id="e-mail"
                 class="form_input"
                 placeholder="Email..."
@@ -284,7 +293,7 @@
               <button type="submit" id="sendBtn">Submit</button>
             </div>
           </div>
-        <!-- </form> -->
+        </form>
       </div>
       <div class="popup" id="popup-1">
         <div class="overlay"></div>
@@ -335,6 +344,10 @@
       </div>
     </section>
     <!-- </section> -->
-    <script src="js/script.js"></script>
+    <script src="/controllers/variableUsed.js"></script>
+    <script src="/controllers/messageFromContactForm.js"></script>
+    <script src="controllers/scrollController.js"></script>
+    <script src="/controllers/sendEmailFromContact.js"></script>
+    <script src="/controllers/navbarController.js"></script>
   </body>
 </html>
