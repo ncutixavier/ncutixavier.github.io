@@ -3,15 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="img/nx.png" type="image/png" />
+    <link rel="icon" href="img/logo-dark.svg" type="image/png" />
     <title>ncutixavier | Portifolio</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Bellefair|Open Sans|Caveat|Roboto|Work Sans|Overlock|Telex|Poppins"
+      href="https://fonts.googleapis.com/css?family=Josefin Slab|Open Sans|Caveat|Reem Kufi|Work Sans|Overlock|Telex|Poppins"
       rel="stylesheet"
     />
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>   
     <script
           src="https://kit.fontawesome.com/ef63f52b34.js"
           crossorigin="anonymous"
@@ -23,7 +22,7 @@
     <section id="home" class="home">
       <div class="navbar">
         <div class="navbar-logo">
-          <a href="#home"><img src="img/nx.png" alt="" srcset="" /></a>
+          <a href="#home"><img src="img/logo.svg" alt="" srcset="" /></a>
         </div>
         <div class="navbar-list">
             <span class="navbar-list-item homePage"><a href="#home">Home</a></span>
@@ -31,122 +30,120 @@
             <span class="navbar-list-item blogPage"><a href="blog.html">Blog</a></span>
             <span class="navbar-list-item aboutPage"><a href="#about">About</a></span>
             <span class="navbar-list-item contactPage"><a href="#contact">Contact</a></span>
-            <span class="navbar-list-item loginPage"><a href="" class="login">Login</a></span>
+            <span class="navbar-list-item loginPage"><a href="login.html" class="login">Login</a></span>
         </div>
       </div>
       <div class="land-content">
         <span><img src="img/photo.png" alt="" srcset="" /></span>
         <span><h1>I'm Ncuti Xavier</h1></span>
         <span><p>a software engineer</p></span>
-      </div>
-      <div class="go-down-btn"><a href="#about"><i class="fas fa-angle-double-down"></i></a></div>
-      <div class="clouds">
-        <div class="cloud_1"><i class="fas fa-cloud"></i></div>
-        <div class="cloud_2"><i class="fas fa-cloud"></i></div>
+        <span class="hire-btn"><a href="#contact">Hire Me</i></a></span>
       </div>
       <div class="goUpBtn"><a href="#home"><i class="fas fa-arrow-up"></i></a></div>
     </section>
 
-    <section class="about" id="about">
-      <div class="greeting-users">
-        <div class="greet-user">
-          <div class="greet-image"><i class="far fa-handshake"></i></div>
-          <div class="greet-title">Hello.</div>
-          <div class="greet-text">
-            <p>
-              I'm a software engineer / developer based in Kigali, Rwanda. I have
-              a passion for software development and I like to work with others to
-              solve the real world problems.
-            </p>
+    <section id="about">
+      <div class="about">
+        <div class="greeting-users">
+          <div class="greet-user">
+            <div class="greet-image"><i class="far fa-handshake"></i></div>
+            <div class="greet-title">Hello.</div>
+            <div class="greet-text">
+              <p>
+                I'm a software engineer / developer based in Kigali, Rwanda. I have
+                a passion for software development and I like to work with others to
+                solve the real world problems.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="about-me">
-        <div class="greet-user">
-          <div class="greet-image">
-            <i class="fas fa-tools"></i>
+  
+        <div class="about-me">
+          <div class="greet-user">
+            <div class="greet-image">
+              <i class="fas fa-tools"></i>
+            </div>
+            <div class="greet-title">What can I do?</div>
+            <div class="greet-text">
+              <p>
+                I'm a developer so I know how to create web based application from
+                scratch. My goal is to be focused and help you to convey the
+                message you want to send.
+              </p>
+            </div>
           </div>
-          <div class="greet-title">What can I do?</div>
-          <div class="greet-text">
-            <p>
-              I'm a developer so I know how to create web based application from
-              scratch. My goal is to be focused and help you to convey the
-              message you want to send.
-            </p>
+          <div class="greet-user">
+            <div class="greet-image">
+              <i class="fab fa-hire-a-helper"></i>
+            </div>
+            <div class="greet-title">What I can help?</div>
+            <div class="greet-text">
+              <p>
+                I'm currently available for freelancer work. If you have a project
+                that you want to get started, think you need my help with
+                something or just fancy saying hey, then
+                <a href="mailto:ncuti60@gmail.com">get in touch.</a>
+              </p>
+            </div>
           </div>
         </div>
-        <div class="greet-user">
-          <div class="greet-image">
-            <i class="fab fa-hire-a-helper"></i>
-          </div>
-          <div class="greet-title">What I can help?</div>
-          <div class="greet-text">
-            <p>
-              I'm currently available for freelancer work. If you have a project
-              that you want to get started, think you need my help with
-              something or just fancy saying hey, then
-              <a href="mailto:ncuti60@gmail.com">get in touch.</a>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="skillAndexperience">
-        <div class="greet-title">Skills & Experience</div>
-        <div class="sk-exp">
-          <div class="skills">
-            <div class="skill">
-                <span>HTML5</span>
-                <div class="line">
-                    <div class="l1 percent">95%</div>
-                </div><br>
-            </div>
-        
-            <div class="skill">
-                <span>CSS3</span>
-                <div class="line">
-                    <div class="l2 percent">85%</div>
-                </div><br>
-            </div>
+  
+        <div class="skillAndexperience">
+          <div class="greet-title">Skills & Experience</div>
+          <div class="sk-exp">
+            <div class="skills">
+              <div class="skill">
+                  <span>HTML5</span>
+                  <div class="line">
+                      <div class="l1 percent">95%</div>
+                  </div><br>
+              </div>
           
-            <div class="skill">
-                <span>Figma (Prototype)</span>
-                <div class="line">
-                    <div class="l2 percent">85%</div>
-                </div><br>
-            </div>
-          
-            <div class="skill">
-                <span>JavaScript</span>
-                <div class="line">
-                    <div class="l3 percent">75%</div>
-                </div><br>
-            </div>
-          
-            <div class="skill">
-                <span>Python</span>
+              <div class="skill">
+                  <span>CSS3</span>
+                  <div class="line">
+                      <div class="l2 percent">85%</div>
+                  </div><br>
+              </div>
+            
+              <div class="skill">
+                  <span>Figma (Prototype)</span>
+                  <div class="line">
+                      <div class="l2 percent">85%</div>
+                  </div><br>
+              </div>
+            
+              <div class="skill">
+                  <span>JavaScript</span>
+                  <div class="line">
+                      <div class="l3 percent">75%</div>
+                  </div><br>
+              </div>
+            
+              <div class="skill">
+                  <span>Python</span>
+                  <div class="line">
+                      <div class="l4 percent">75%</div>
+                  </div><br>
+              </div>
+  
+              <div class="skill">
+                <span>Django</span>
                 <div class="line">
                     <div class="l4 percent">75%</div>
                 </div><br>
             </div>
-
-            <div class="skill">
-              <span>Django</span>
-              <div class="line">
-                  <div class="l4 percent">75%</div>
-              </div><br>
           </div>
-        </div>
-
-        <div class="experience">
-          <div class="experience-user">
-            <div class="greet-image"><i class="fas fa-briefcase"></i></div>
-            <div class="greet-title">Experience.</div>
-            <div class="greet-text">
-              <p>
-                I am a software developer who is passionate about building the best stuff from scratch. I started building a website from 2017 and I'm now studying Computer Engineering with a Bachelor Degree.
-              </p>
+  
+          <div class="experience">
+            <div class="experience-user">
+              <div class="greet-image"><i class="fas fa-briefcase"></i></div>
+              <div class="greet-title">Experience.</div>
+              <div class="greet-text">
+                <p>
+                  I am a software developer who is passionate about building the best stuff from scratch. I started building a website from 2017 and now I'm working for a bachelor degree in Computer Engineering. 
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -338,24 +335,6 @@
       </div>
     </section>
     <!-- </section> -->
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyCDC_Fr59RYH5mFtMT2qES1SaLm2uejH0A",
-        authDomain: "personal-website-664ca.firebaseapp.com",
-        databaseURL: "https://personal-website-664ca.firebaseio.com",
-        projectId: "personal-website-664ca",
-        storageBucket: "personal-website-664ca.appspot.com",
-        messagingSenderId: "138869735689",
-        appId: "1:138869735689:web:2cdcfd8a88977e022453d8",
-        measurementId: "G-N5VFQ4H262"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
-      const db = firebase.firestore()
-    </script>
-
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -8,12 +8,25 @@ window.onscroll = function () {
     }
 };
 
-//check if it works
-db.collection('messages').get().then((msg) => {
-    msg.docs.map(doc => console.log(doc.data()))
-})
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyCDC_Fr59RYH5mFtMT2qES1SaLm2uejH0A",
+    authDomain: "personal-website-664ca.firebaseapp.com",
+    databaseURL: "https://personal-website-664ca.firebaseio.com",
+    projectId: "personal-website-664ca",
+    storageBucket: "personal-website-664ca.appspot.com",
+    messagingSenderId: "138869735689",
+    appId: "1:138869735689:web:2cdcfd8a88977e022453d8",
+    measurementId: "G-N5VFQ4H262"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore()
 
-
+//Display All mesages
+// db.collection('messages').get().then((msg) => {
+//     msg.docs.map(doc => console.log(doc.data()))
+// })
 
 //Adding messages in firebase
 const addMessage = (name, email, message) => {
@@ -24,8 +37,8 @@ const addMessage = (name, email, message) => {
     })
 }
 
-const workBtn =  document.querySelector(".workPage")
-workBtn.addEventListener('click', function(){
+const workBtn = document.querySelector(".workPage")
+workBtn.addEventListener('click', function () {
 
     document.querySelector(".work").scrollIntoView({
         behavior: "smooth"
@@ -75,8 +88,7 @@ const validation = (e) => {
         return false
 
     } else {
-        addMessage(userName.value,userEmail.value,userMessage.value)
-
+        addMessage(userName.value, userEmail.value, userMessage.value)
         togglePopup()
         clearFields()
         return true

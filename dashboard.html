@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="icon" href="img/logo-dark.svg" type="image/png" />
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="css/dashboard-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abel|Roboto|Reem Kufi"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup()">&times;</div>
+        <div class="form">
+          <div class="error">All Fields are required</div>
+          <div class="form-input">
+            <label for="">Writer</label>
+            <input
+              type="text"
+              name="writer"
+              id="writer"
+              placeholder="Writer of Article"
+            />
+          </div>
+
+          <div class="form-input">
+            <label for="">Title</label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="Title of Article"
+            />
+          </div>
+
+          <div class="form-input">
+            <label for="">Date</label>
+            <input type="date" name="date" id="date" placeholder="Writer" />
+          </div>
+
+          <div class="form-input">
+            <label for="">Image Source</label>
+            <input
+              type="text"
+              name="image"
+              id="image"
+              placeholder="Image Source"
+            />
+          </div>
+
+          <div class="form-input">
+            <label for="">Article</label>
+            <textarea
+              name="article"
+              id="article"
+              cols="30"
+              rows="5"
+              placeholder="Article"
+            ></textarea>
+          </div>
+
+          <div class="form-input">
+            <button type="submit" id="save-data-btn">Submit</button>
+            <button type="submit" id="update-data-btn">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <button class="toggle-btn" onclick="togglePopup()">Show Popup</button> -->
+
+    <section class="dashboard">
+      <div class="main-title">Admin Dashboard</div>
+      <div class="user-section">
+        <div class="user-profile">
+          <div class="user-profile-img">
+            <img src="img/user.png" alt="user" srcset="" />
+          </div>
+          <div class="user-profile-name">
+            <span>Welcome </span>
+            <span class="username-profile">ADMIN</span>
+          </div>
+        </div>
+
+        <div class="user-navbar">
+          <div class="user-navbar-item"><a href="">Projects</a></div>
+          <div class="user-navbar-item"><a href="">Blog</a></div>
+        </div>
+
+        <div class="logout-btn">
+          <button type="submit" class="btn-logout">Logout</button>
+        </div>
+      </div>
+
+      <div class="items-section">
+        <div class="items-main-title">
+          <div class="items-title">Blog Posts</div>
+          <div class="items-create-btn">
+            <button type="submit" onclick="togglePopup()" id="createBtn">Create</button>
+          </div>
+        </div>
+
+        <div class="articles">
+          <!-- <div class="article">
+            <img
+              class="article-img"
+              src="https://live.staticflickr.com/4344/36806413445_b8b774bae6_z.jpg"
+              alt="code-editor"
+              srcset=""
+            />
+            <a href="" class="article-title">Best Code Editors for Developer</a>
+            <div class="article-writer">By Ncuti Xavier, 8/1/2020</div>
+            <p class="article-desc">
+              It is always exciting for developers from all over the world
+              whenever they get to showcase their best code editor at computer
+              expos and tech conferences. On that note when we talk about free
+              code editors
+            </p>
+            <div class="btn-group">
+              <button class="btn-update">Update</button>
+              <button class="btn-delete">Delete</button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <script src="js/app.js"></script>
+  </body>
+</html>
