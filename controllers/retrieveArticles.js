@@ -1,3 +1,7 @@
+const renderUserName = doc => {
+    console.log('rendered')
+}
+
 const createTitleAndDate = doc => {
     //Create Title and date
     const singleBlogTitle = document.createElement('div')
@@ -90,7 +94,7 @@ const createSingleBlogComment = doc => {
     commentTitle.setAttribute('class', 'single-blog-comment-title')
 
     const title = document.createElement('h1')
-    title.textContent = 'Comments'
+    title.textContent = `${doc.comments.length} Comments`
 
     commentTitle.appendChild(title)
 

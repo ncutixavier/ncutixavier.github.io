@@ -27,14 +27,15 @@ variableToBeUsed.saveDataBtn.addEventListener('click', () => {
     })
         // Converting to JSON
         .then(response => response.json())
+        
         // Displaying results to console
         .then(dt => {
             if (dt.status == "success") {
                 alert("Created Successful✅")
-                window.history.pushState('newArticle', "Page", `/dashboard.html`);
+                window.history.pushState('Dashboard', "Page", `/dashboard.html`);
                 location.reload()
 
-            } else if (localStorage.length == 0) {
+            } else if ((localStorage.getItem("token") == null)) {
                 variableToBeUsed.authError.classList.add('error-login')
                 variableToBeUsed.authError.textContent = "Please login to get access"
             } else {

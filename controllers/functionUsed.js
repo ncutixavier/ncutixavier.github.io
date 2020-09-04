@@ -26,6 +26,7 @@ const togglePopup = () => {
 //delete an existing article
 const deleteArticle = (e) => {
     let id = e.target.parentElement.parentElement.getAttribute('data-id')
+
     var retVal = confirm("Are you sure you want to delete this article?⚠")
     if (retVal == true) {
         fetch(`https://morning-thicket-92126.herokuapp.com/api/v1/blogs/${id}`, {
@@ -34,11 +35,16 @@ const deleteArticle = (e) => {
                 'Content-Type': 'application/json',
                 "Authorization": `Bearer ${localStorage.token}`
             }
-        })
-            .then(res => res.json())
-            .then(dt => console.log(dt))
-        location.reload()
-        return true;
+        }).then(res => res.json())
+            .then(dt => {
+                if (dt.status == "failed") {
+                    alert(dt.message)
+                } else {
+                    alert("Deleted Successful!")
+                    location.reload()
+                }
+            })
+        // return true;
     } else {
         alert('Not deleted...')
         return false;
@@ -138,7 +144,7 @@ const renderArticle = doc => {
         })
             .then(res => res.json())
             .then(dt => {
-                if (localStorage.length == 0) {
+                if ((localStorage.getItem("token") == null)) {
                     variableToBeUsed.authError.classList.add('error-login')
                     variableToBeUsed.authError.textContent = "Please you may login to get access"
                 } else {
@@ -166,10 +172,10 @@ const renderArticle = doc => {
                     })
                 }).then(res => res.json())
                     .then(result => {
-                        if (result.status == 'success'){
+                        if (result.status == 'success') {
                             clearFields
                             location.reload()
-                        }else if(localStorage.length == 0){
+                        } else if ((localStorage.getItem("token") == null)) {
                             alert("Please, you may login to get access")
                         }
                     })

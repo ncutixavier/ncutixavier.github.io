@@ -13,6 +13,11 @@
       href="https://fonts.googleapis.com/css?family=Abel|Roboto|Reem Kufi"
       rel="stylesheet"
     />
+    <script>
+      if (localStorage.getItem("token") == null) {
+        window.location.replace("http://ncutixavier.netlify.app/login.html");
+      }
+    </script>
   </head>
   <body>
     <div class="popup" id="popup-1">
@@ -104,7 +109,9 @@
         <div class="items-main-title">
           <div class="items-title">Blog Posts</div>
           <div class="items-create-btn">
-            <button type="submit" onclick="togglePopup()" id="createBtn">Create</button>
+            <button type="submit" onclick="togglePopup()" id="createBtn">
+              Create
+            </button>
           </div>
         </div>
 

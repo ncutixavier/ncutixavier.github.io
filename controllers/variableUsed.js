@@ -9,7 +9,9 @@ const variableToBeUsed = {
     logoutBtn: document.querySelector('.btn-logout'),
     authError: document.querySelector('.error'),
     singleBlog: document.querySelector('.single-blog'),
-    scrollUp: document.querySelector('.goUpBtn')
+    scrollUp: document.querySelector('.goUpBtn'),
+    profileName: document.querySelector('.user-profile-name')
+    // user-profile-name
 }
 
 const variables = {
