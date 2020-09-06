@@ -10,7 +10,7 @@ const variableToBeUsed = {
     authError: document.querySelector('.error'),
     singleBlog: document.querySelector('.single-blog'),
     scrollUp: document.querySelector('.goUpBtn'),
-    profileName: document.querySelector('.user-profile-name')
+    profileName: document.querySelector('.username-profile')
     // user-profile-name
 }
 
@@ -25,6 +25,17 @@ const variables = {
     closeBtn: document.querySelector(".fa-times-circle"),
 }
 
+const credentialVariable = {
+    name: document.querySelector('#name'),
+    email: document.querySelector('#mail'),
+    password: document.querySelector('#password'),
+    passwordConfirm: document.querySelector('#passwordConfirm'),
+    btnRegister: document.querySelector('.btn-register'),
+    btnLogin: document.querySelector('.btn-login'),
+    loginerror: document.querySelector('.errorlogin'),
+    login: document.querySelector('.login')
+}
+
 document.onkeydown = function (e) {
     if (e.ctrlKey &&
         (e.keyCode === 67 ||
@@ -36,3 +47,4 @@ document.onkeydown = function (e) {
         return true;
     }
 };
+

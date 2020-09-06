@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Alata";
+  font-family: "Work Sans";
 }
 
 html,
@@ -72,6 +72,16 @@ body {
   transition: border-bottom 300ms ease-in-out;
 }
 
+/* .login{
+  background: linear-gradient(to right, #ff00cc, #333399);
+  padding: .5rem 2rem;
+  border-radius: 1rem;
+}
+
+.login:hover{
+  background: linear-gradient(to left, #ff00cc, #333399);
+} */
+
 .land-content {
   display: flex;
   flex-wrap: wrap;
@@ -88,7 +98,7 @@ body {
 }
 
 .land-content h1 {
-  font-family: "Caveat";
+  font-family: "Tangerine";
   z-index: 10;
   font-size: 8rem;
   color: #fff;
@@ -606,7 +616,6 @@ button:hover {
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
 }
 
 .content-comment {
@@ -622,7 +631,6 @@ button:hover {
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
 }
 
 .popup .close-btn {
@@ -919,14 +927,12 @@ span > a > i:hover {
 }
 
 .single-blog-title > h1 {
-  font-family: "Open Sans";
   font-size: 3.5rem;
   letter-spacing: 0.04em;
   line-height: 2;
 }
 
 .single-blog-title > h6 {
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: normal;
   font-size: 1.5rem;
@@ -942,7 +948,6 @@ span > a > i:hover {
 }
 
 .single-blog-article > p {
-  font-family: "Open Sans";
   font-style: normal;
   font-weight: lighter;
   font-size: 1.8rem;
@@ -958,7 +963,6 @@ span > a > i:hover {
 }
 
 .comment-title > h1 {
-  font-family: "open sans";
   font-size: 3.5rem;
   line-height: 2;
   color: #0a65d0;
@@ -976,7 +980,6 @@ hr {
 
 .comment > h5,
 .comment > p {
-  font-family: "open sans";
   font-size: 2rem;
 }
 
@@ -1006,7 +1009,6 @@ hr {
 
 .comment > h5,
 .comment > p {
-  font-family: "open sans";
   font-size: 2rem;
   line-height: 2;
 }
@@ -1114,7 +1116,6 @@ hr {
   outline: none;
   border: none;
   border-radius: 0.6rem;
-  font-family: sans-serif;
 }
 
 .input-btn > button {
@@ -1188,6 +1189,17 @@ hr {
 	pointer-events: none;
 	width: 10rem;
 	height: 10rem;
+	border: 0.6rem solid transparent;
+	border-color: #eee;
+	border-top-color: #0f295b;
+	border-radius: 50%;
+  animation: loadingspin 1s linear infinite;
+}
+
+.small-loader {
+	pointer-events: none;
+	width: 1rem;
+	height: 1rem;
 	border: 0.6rem solid transparent;
 	border-color: #eee;
 	border-top-color: #0f295b;

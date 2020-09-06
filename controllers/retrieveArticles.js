@@ -55,6 +55,11 @@ const createCommentButton = () => {
         window.scrollTo(0, 0)
         variables.blur.classList.toggle('active-blur')
         variables.commentForm.classList.toggle('active-comment')
+        if (variables.name.value === '' && localStorage.length > 0) {
+            variables.name.value = localStorage.name
+            variables.name.disabled = true
+        }
+        
     })
 
     return commentButton

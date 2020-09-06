@@ -484,3 +484,26 @@ hr {
 .hide{
   display: none;
 }
+
+.loading{
+  display: none;
+  justify-content: center;
+  /* margin: 4rem 0; */
+}
+
+.loader {
+	pointer-events: none;
+	width: 4rem;
+	height: 4rem;
+	border: 0.6rem solid transparent;
+	border-color: #eee;
+	border-top-color: #0f295b;
+	border-radius: 50%;
+  animation: loadingspin 1s linear infinite;
+}
+
+@keyframes loadingspin {
+	100% {
+			transform: rotate(360deg)
+	}
+}

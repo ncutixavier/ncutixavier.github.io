@@ -37,15 +37,26 @@ const validate = e => {
             })
         }).then(res => res.json())
             .then(result => console.log(result))
-        
+
         variables.name.value = ''
         variables.comment.value = ''
         return true
     }
 }
-
 variables.sendComment.addEventListener('click', validate)
-variables.closeBtn.addEventListener('click', ()=>{
+variables.closeBtn.addEventListener('click', () => {
     variables.commentForm.classList.toggle('active-comment')
     variables.blur.classList.toggle('active-blur')
 })
+
+
+// manipulating login button in navbar
+if (!(localStorage.getItem("token") == null)) {
+    credentialVariable.login.textContent = "Logout"
+}
+
+if (credentialVariable.login.textContent == "Logout") {
+    credentialVariable.login.addEventListener('click', (e) => {
+        localStorage.clear()
+    })
+}

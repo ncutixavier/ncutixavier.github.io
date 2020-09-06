@@ -1,22 +1,13 @@
-const name = document.querySelector('#name')
-const email = document.querySelector('#mail')
-const password = document.querySelector('#password')
-const passwordConfirm = document.querySelector('#passwordConfirm')
-const btnRegister = document.querySelector('.btn-register')
-const btnLogin = document.querySelector('.btn-login')
-const loginerror = document.querySelector('.errorlogin')
-var token = ''
-
-btnRegister.addEventListener('click', () => {
+credentialVariable.btnRegister.addEventListener('click', () => {
     fetch("https://morning-thicket-92126.herokuapp.com/api/v1/users/signup", {
         // Adding method type 
         method: "POST",
         // Adding body or contents to send 
         body: JSON.stringify({
-            name: name.value,
-            email: email.value,
-            password: password.value,
-            passwordConfirm: passwordConfirm.value
+            name: credentialVariable.name.value,
+            email: credentialVariable.email.value,
+            password: credentialVariable.password.value,
+            passwordConfirm: credentialVariable.passwordConfirm.value
         }),
         // Adding headers to the request 
         headers: {
@@ -28,25 +19,26 @@ btnRegister.addEventListener('click', () => {
         // Displaying results to console
         .then(dt => {
             if (dt.status == 'fail') {
-                loginerror.classList.add('error-login')
-                loginerror.textContent = dt.message._message
+                credentialVariable.loginerror.classList.add('error-login')
+                credentialVariable.loginerror.textContent = dt.message._message
                 // console.log(dt)
             } else {
                 clearFields()
-                loginerror.classList.remove('error-login')
-                loginerror.classList.add('success-login')
-                loginerror.textContent = "Registered Successful!"
+                credentialVariable.loginerror.classList.remove('error-login')
+                credentialVariable.loginerror.classList.add('success-login')
+                credentialVariable.loginerror.textContent = "Registered Successful!"
                 // console.log(dt)
             }
         })
 })
 
-btnLogin.addEventListener('click', () => {
+credentialVariable.btnLogin.addEventListener('click', () => {
+    document.querySelector('.loading').style.display = 'flex'
     fetch("https://morning-thicket-92126.herokuapp.com/api/v1/users/login", {
         method: "POST",
         body: JSON.stringify({
-            email: email.value,
-            password: password.value
+            email: credentialVariable.email.value,
+            password: credentialVariable.password.value
         }),
         headers: {
             "Content-type": "application/json; charset=UTF-8"
@@ -54,30 +46,42 @@ btnLogin.addEventListener('click', () => {
     })
         .then(response => response.json())
         .then(dt => {
+            document.querySelector('.loading').style.display = 'none'
+            // document.querySelector('.loginerror').style.display = 'flex'
+
             if (dt.status == 'failed') {
-                loginerror.classList.add('error-login')
-                loginerror.textContent = dt.message
-                email.focus()
-            } else if (dt.status == 'success') {
-                loginerror.classList.remove('error-login')
-                clearFields()
+                credentialVariable.loginerror.classList.add('error-login')
+                credentialVariable.loginerror.textContent = dt.message
+                credentialVariable.email.focus()
+
+            } else if (dt.status == 'success' && dt.user.role == 'user') {
+                credentialVariable.loginerror.classList.remove('error-login')
+                clearCredentialsField()
+                localStorage.setItem("token", dt.token)
+                localStorage.setItem("name", dt.user.name)
+                window.location.href = "blog.html"
+                // credentialVariable.login.textContent = 'Logout'
+
+            } else if (dt.status == 'success' && dt.user.role == 'admin') {
+                credentialVariable.loginerror.classList.remove('error-login')
+                clearCredentialsField()
                 localStorage.setItem("token", dt.token)
                 window.location.href = "dashboard.html"
             }
         })
 })
 
-const clearFields = () => {
-    email.value = ''
-    password.value = ''
+const clearCredentialsField = () => {
+    credentialVariable.email.value = ''
+    credentialVariable.password.value = ''
 }
 
-document.onkeydown = function(e) {
-    if (e.ctrlKey && 
-        (e.keyCode === 67 || 
-         e.keyCode === 86 || 
-         e.keyCode === 85 || 
-         e.keyCode === 117)) {
+document.onkeydown = function (e) {
+    if (e.ctrlKey &&
+        (e.keyCode === 67 ||
+            e.keyCode === 86 ||
+            e.keyCode === 85 ||
+            e.keyCode === 117)) {
         return false;
     } else {
         return true;

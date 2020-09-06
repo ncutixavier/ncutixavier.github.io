@@ -12,25 +12,27 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+
     <script
       src="https://kit.fontawesome.com/ef63f52b34.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="css/dashboard-style.css" />
-    <link rel="stylesheet" href="css/responsive-style.css" />
+    <link rel="stylesheet" href="css/dashboard-style.css"/>
+    <link rel="stylesheet" href="css/responsive-style.css">
   </head>
   <body>
     <section class="login">
       <div class="login-container">
-        <div class="errorlogin"></div>
-        <div class="back-link pd"><a href="blog.html">Back</a></div>
-      <div class="loading"><div class="loader"></div></div>
-
+        <div class="errorlogin">gfhdghfdghfdh</div>
+        <div class="back-link pd"><a href="login.html">Back To Login</a></div>
         <div class="login-container-wrapper">
           <div class="login-logo-img pd">
             <img src="img/logo-dark.svg" alt="" />
           </div>
           <div class="login-form">
+            <div class="login-form-input">
+              <input type="text" name="" id="name" placeholder="Name" />
+            </div>
             <div class="login-form-input">
               <input type="email" name="" id="mail" placeholder="Email" />
             </div>
@@ -45,17 +47,24 @@
             </div>
 
             <div class="login-form-input">
-              <button type="submit" class="btn-login">Login</button>
-              <button type="submit" class="btn-register hide">Login</button>
+              <input
+                type="password"
+                name=""
+                id="passwordConfirm"
+                placeholder="PasswordConfirm"
+              />
+            </div>
+
+            <div class="login-form-input">
+              <button type="submit" class="btn-register">Register</button>
+              <button type="submit" class="btn-login hide">Register</button>
             </div>
           </div>
-          <div class="back-link register-link">
-            <a href="register.html">Not Registered?</a>
-          </div>
+          <!-- <div class="back-link register-link"><a href="">Not Registered?</a></div> -->
         </div>
       </div>
     </section>
     <script src="/controllers/variableUsed.js"></script>
-    <script src="controllers/userCredentials.js"></script>
+    <script src="js/userCredentials.js"></script>
   </body>
 </html>

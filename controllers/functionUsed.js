@@ -188,6 +188,7 @@ const renderArticle = doc => {
     })
 }
 
+
 const clearFields = () => {
     variableToBeUsed.title.value = ''
     variableToBeUsed.image.value = ''

@@ -82,6 +82,18 @@ const validation = (e) => {
 
     } else {
         addMessage(userName.value, userEmail.value, userMessage.value)
+        fetch("https://morning-thicket-92126.herokuapp.com/api/v1/users/sendEmail", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            },
+            body: JSON.stringify({
+                name: userName.value,
+                email: userEmail.value,
+                message: userMessage.value
+            })
+        }).then(res => res.json())
+        // .then(res => console.log(res))
         togglePopup()
         clearFields()
         return true
