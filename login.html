@@ -12,17 +12,20 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
     <script
       src="https://kit.fontawesome.com/ef63f52b34.js"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/dashboard-style.css" />
+    <link rel="stylesheet" href="css/responsive-style.css" />
   </head>
   <body>
     <section class="login">
       <div class="login-container">
-        <div class="back-link pd"><a href="index.html">Back To Home</a></div>
+        <div class="errorlogin"></div>
+        <div class="back-link pd"><a href="blog.html">Back</a></div>
+      <div class="loading"><div class="loader"></div></div>
+
         <div class="login-container-wrapper">
           <div class="login-logo-img pd">
             <img src="img/logo-dark.svg" alt="" />
@@ -52,6 +55,7 @@
         </div>
       </div>
     </section>
-    <script src="js/auths.js"></script>
+    <script src="/controllers/variableUsed.js"></script>
+    <script src="controllers/userCredentials.js"></script>
   </body>
 </html>

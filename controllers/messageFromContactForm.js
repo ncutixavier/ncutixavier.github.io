@@ -1,12 +1,5 @@
-window.onscroll = function () {
-    if (document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100) {
-        document.querySelector('.navbar').classList.add("white-background")
-        document.querySelector('.goUpBtn').style.display = "block"
-    } else {
-        document.querySelector('.navbar').classList.remove("white-background")
-        document.querySelector('.goUpBtn').style.display = "none"
-    }
-};
+
+
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
@@ -89,6 +82,18 @@ const validation = (e) => {
 
     } else {
         addMessage(userName.value, userEmail.value, userMessage.value)
+        fetch("https://morning-thicket-92126.herokuapp.com/api/v1/users/sendEmail", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            },
+            body: JSON.stringify({
+                name: userName.value,
+                email: userEmail.value,
+                message: userMessage.value
+            })
+        }).then(res => res.json())
+        // .then(res => console.log(res))
         togglePopup()
         clearFields()
         return true

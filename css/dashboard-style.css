@@ -192,6 +192,30 @@ button:hover {
   display: none;
 }
 
+.errorlogin{
+  display: none;
+}
+
+.error-login {
+  background-color: #e22d2d;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+  display: block;
+}
+
+.success-login {
+  background-color: green;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+  display: block;
+}
+
 .single-blog {
   margin: 10% 0 2%;
 }
@@ -309,7 +333,7 @@ hr {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   background: #fff;
-  width: 35%;
+  width: 55%;
   z-index: 2;
   text-align: center;
   padding: 2.5rem 5rem;
@@ -459,4 +483,27 @@ hr {
 
 .hide{
   display: none;
+}
+
+.loading{
+  display: none;
+  justify-content: center;
+  /* margin: 4rem 0; */
+}
+
+.loader {
+	pointer-events: none;
+	width: 4rem;
+	height: 4rem;
+	border: 0.6rem solid transparent;
+	border-color: #eee;
+	border-top-color: #0f295b;
+	border-radius: 50%;
+  animation: loadingspin 1s linear infinite;
+}
+
+@keyframes loadingspin {
+	100% {
+			transform: rotate(360deg)
+	}
 }
