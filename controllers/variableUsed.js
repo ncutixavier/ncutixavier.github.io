@@ -36,6 +36,11 @@ const credentialVariable = {
     login: document.querySelector('.login')
 }
 
+const projectVariable = {
+    projects: document.querySelector('.projects'),
+    project: document.querySelector('.project')
+}
+
 document.onkeydown = function (e) {
     if (e.ctrlKey &&
         (e.keyCode === 67 ||

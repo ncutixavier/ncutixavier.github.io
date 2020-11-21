@@ -59,7 +59,7 @@ const createCommentButton = () => {
             variables.name.value = localStorage.name
             variables.name.disabled = true
         }
-        
+
     })
 
     return commentButton
@@ -181,7 +181,6 @@ const renderArticles = doc => {
         let id = e.target.parentElement.getAttribute('data-id')
         variables.commentForm.setAttribute('data-id', id)
         variableToBeUsed.articles.style.display = 'none'
-
         fetch(`https://morning-thicket-92126.herokuapp.com/api/v1/blogs/${id}`, {
             method: 'GET'
         })
@@ -189,9 +188,11 @@ const renderArticles = doc => {
             .then(dt => {
                 // console.log(dt)
                 renderSingleArticle(dt.data.article)
-                // window.history.pushState('newArticle', "Page", `/blog/${dt.data.article.title}`);
+                let articleTitle = dt.data.article.title
                 document.querySelector('.loading').style.display = 'none'
             })
+        console.log(window.location)
+
     })
 }
 
