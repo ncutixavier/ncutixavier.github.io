@@ -34,6 +34,7 @@ credentialVariable.btnRegister.addEventListener('click', () => {
 
 credentialVariable.btnLogin.addEventListener('click', () => {
     document.querySelector('.loading').style.display = 'flex'
+    document.querySelector('.login-container').style.display = 'none'
     fetch("https://morning-thicket-92126.herokuapp.com/api/v1/users/login", {
         method: "POST",
         body: JSON.stringify({
@@ -48,6 +49,8 @@ credentialVariable.btnLogin.addEventListener('click', () => {
         .then(dt => {
             document.querySelector('.loading').style.display = 'none'
             // document.querySelector('.loginerror').style.display = 'flex'
+            document.querySelector('.login-container').style.display = 'block'
+
 
             if (dt.status == 'failed') {
                 credentialVariable.loginerror.classList.add('error-login')
@@ -56,6 +59,7 @@ credentialVariable.btnLogin.addEventListener('click', () => {
 
             } else if (dt.status == 'success' && dt.user.role == 'user') {
                 credentialVariable.loginerror.classList.remove('error-login')
+                document.querySelector('.login-container').style.display = 'none'
                 clearCredentialsField()
                 localStorage.setItem("token", dt.token)
                 localStorage.setItem("name", dt.user.name)
