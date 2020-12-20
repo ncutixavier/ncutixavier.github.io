@@ -56,30 +56,38 @@ const renderProjects = doc => {
 const projects = [
     {
         id: 1,
+        image: 'findhome.png',
+        title: 'Ahome 🏡',
+        desc: 'Ahome is the platform launched in 2020. It comes to help people which are struggling looking ...',
+        language :"React and Node JS",
+        link: 'https://fhome-staging.herokuapp.com/'
+    },
+    {
+        id: 2,
         image: 'messenger.png',
-        title: 'Messenger Website',
-        desc: 'Messenger-Rwanda is company located in Rwanda. We help people who want to deliver message in difference province of Rwanda.',
+        title: 'Messenger 🚚',
+        desc: 'Messenger-Rwanda is company located in Rwanda. We help people who want to deliver message in ...',
         language :"HTML5, CSS3, JavaScript",
         link: 'https://nx-messenger.netlify.com/'
     },
     {
-        id: 2,
+        id: 3,
         image: 'donationweb.png',
-        title: 'Partners In Hope Website',
+        title: 'Partners In Hope',
         desc: 'Partners in hope is a local nongovernmental non-profit organization whose mission is to continue...',
         language :"HTML5, CSS3, JavaScript",
         link: 'https://donationweb.netlify.app/'
     },
     {
-        id: 3,
+        id: 4,
         image: 'volvelab.png',
-        title: 'Volvelab Website',
+        title: 'Volvelab',
         desc: 'Volve Lab provides turn-key software development services that add value to your business.',
         language :"HTML5, CSS3, JavaScript",
         link: 'https://volvelab.netlify.app/'
     },
     {
-        id: 4,
+        id: 5,
         image: 'api.png',
         title: 'Find Home API',
         desc: 'Find Home API provides easy way to find house for rent. View the documentation below',
@@ -87,7 +95,7 @@ const projects = [
         link: 'https://find-home-apps-staging.herokuapp.com/api-docs'
     },
     {
-        id: 5,
+        id: 6,
         image: 'api.png',
         title: 'Phantom API',
         desc: 'Phantom API provides easy way to track public bus i Kigali. View the documentation below',
