@@ -47,7 +47,6 @@ variableToBeUsed.saveDataBtn.addEventListener('click', () => {
 
 //create
 variableToBeUsed.createBtn.addEventListener('click', () => {
-    window.history.pushState('newArticle', "Page", "/dashboard/newArticle");
     variableToBeUsed.updateDataBtn.style.display = 'none'
     variableToBeUsed.saveDataBtn.textContent = 'Save'
 })

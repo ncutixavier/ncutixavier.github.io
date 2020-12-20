@@ -8,6 +8,9 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+    <script>tinymce.init({ selector: '#article' });</script>
     <link rel="stylesheet" href="css/dashboard-style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Abel|Roboto|Reem Kufi"
@@ -114,29 +117,7 @@
             </button>
           </div>
         </div>
-
-        <div class="articles">
-          <!-- <div class="article">
-            <img
-              class="article-img"
-              src="https://live.staticflickr.com/4344/36806413445_b8b774bae6_z.jpg"
-              alt="code-editor"
-              srcset=""
-            />
-            <a href="" class="article-title">Best Code Editors for Developer</a>
-            <div class="article-writer">By Ncuti Xavier, 8/1/2020</div>
-            <p class="article-desc">
-              It is always exciting for developers from all over the world
-              whenever they get to showcase their best code editor at computer
-              expos and tech conferences. On that note when we talk about free
-              code editors
-            </p>
-            <div class="btn-group">
-              <button class="btn-update">Update</button>
-              <button class="btn-delete">Delete</button>
-            </div>
-          </div> -->
-        </div>
+        <div class="articles"></div>
       </div>
     </section>
     <script src="controllers/variableUsed.js"></script>
