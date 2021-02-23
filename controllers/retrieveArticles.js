@@ -26,17 +26,12 @@ const createImageAndContent = doc => {
     const img = document.createElement('img')
     img.src = doc.image
 
-    const p = document.createElement('p')
-    p.textContent = doc.content
+    const div = document.createElement('div')
+    div.setAttribute('class', 'article-content-text')
+    div.innerHTML = doc.content
 
     singleBlogArticle.appendChild(img)
-
-    let paragraphs = doc.content.split("<br>");
-    paragraphs.map((paragraph) => {
-        let p = document.createElement("p");
-        p.textContent = paragraph;
-        singleBlogArticle.appendChild(p);
-    });
+    singleBlogArticle.appendChild(div);
 
     return singleBlogArticle
 }
@@ -163,9 +158,9 @@ const renderArticles = doc => {
 
     artContent = doc.content
     if (artContent.length > 150) {
-        desc.textContent = artContent.substr(0, 150) + "..."
+        desc.innerHTML = artContent.substr(0, 150) + "..."
     } else {
-        desc.textContent = artContent
+        desc.innerHTML = artContent
     }
     // Append sub-item to correspond item
     article.appendChild(img)

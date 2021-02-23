@@ -948,7 +948,7 @@ span > a > i:hover {
   padding-bottom: 2%;
 }
 
-.single-blog-article > p {
+.single-blog-article > p, .article-content-text {
   font-style: normal;
   font-weight: lighter;
   font-size: 1.8rem;
@@ -1207,6 +1207,11 @@ hr {
 	border-radius: 50%;
   animation: loadingspin 1s linear infinite;
 }
+
+/* .article-content-text{
+  font-size: 1.6rem;
+  line-height: 1.5;
+} */
 
 @keyframes loadingspin {
 	100% {

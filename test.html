@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="text">
+        <h2>Best code editors for developers</h2><p>Finding the best code editor for your workflow can have a huge impact on your productivity. There's no shortage of code editors on the market and selecting the one that is right for your developer needs can transform your workflow.&nbsp;</p><p>Typically, developers do not fit into a single type, and the same goes for code editors. While one editor might work for one developer it might not suit another. So it is critical you take some time to figure out which is the best code editor for you. A best-fit code editor will make any developer more efficient at writing code. It will be a personal assistant helping examine code for less mistakes and show where edits need to be made.&nbsp;</p><p>And, just as importantly, it will need to be customization, allowing for the creation of a custom UI and an intuitive user experience. This is critical as you will most likely be looking at your code editor screen for hours on end.</p>
+    </div>
+
+    <textarea name="txt" id="txt" cols="30" class="txt" rows="10"></textarea>
+    <button id="submit">submit</button>
+    <script src="ckeditor/ckeditor.js"></script>
+    <script>
+        let theEditor
+        const submit = document.getElementById('submit')
+        const text = document.getElementById('text')
+        let txt = document.getElementById('txt').value
+      ClassicEditor.create(document.getElementById('txt')).then(editor=>{
+          theEditor = editor
+      })
+      submit.addEventListener('click', () => {
+          txt = theEditor.getData()
+        console.log(txt)
+      })
+    </script>
+</body>
+</html>
