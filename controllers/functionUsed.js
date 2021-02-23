@@ -110,9 +110,9 @@ const renderArticle = doc => {
 
     artContent = doc.content
     if (artContent.length > 150) {
-        desc.textContent = artContent.substr(0, 150) + "..."
+        desc.innerHTML = artContent.substr(0, 150) + "..."
     } else {
-        desc.textContent = artContent
+        desc.innerHTML = artContent
     }
 
     // Append sub-item to correspond item
@@ -151,12 +151,14 @@ const renderArticle = doc => {
                     // console.log(dt)
                     variableToBeUsed.title.value = dt.data.article.title
                     variableToBeUsed.image.value = dt.data.article.image
-                    variableToBeUsed.content.value = dt.data.article.content
+                    // variableToBeUsed.content.value = dt.data.article.content
+                    theEditor.setData(dt.data.article.content);
                 }
 
             })
 
         variableToBeUsed.updateDataBtn.addEventListener('click', () => {
+            articleContent = theEditor.getData()
             var retVal = confirm("Are you sure you want to update this article?🙄")
             if (retVal == true) {
                 fetch(`https://morning-thicket-92126.herokuapp.com/api/v1/blogs/${id}`, {
@@ -168,7 +170,7 @@ const renderArticle = doc => {
                     body: JSON.stringify({
                         title: variableToBeUsed.title.value,
                         image: variableToBeUsed.image.value,
-                        content: variableToBeUsed.content.value
+                        content: articleContent
                     })
                 }).then(res => res.json())
                     .then(result => {

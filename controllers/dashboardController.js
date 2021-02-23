@@ -13,6 +13,8 @@ fetch('https://morning-thicket-92126.herokuapp.com/api/v1/blogs', {
 
 //Save created article
 variableToBeUsed.saveDataBtn.addEventListener('click', () => {
+    articleContent = theEditor.getData()
+    console.log(articleContent)
     fetch("https://morning-thicket-92126.herokuapp.com/api/v1/blogs/", {
         method: "POST",
         headers: {
@@ -22,7 +24,7 @@ variableToBeUsed.saveDataBtn.addEventListener('click', () => {
         body: JSON.stringify({
             title: variableToBeUsed.title.value,
             image: variableToBeUsed.image.value,
-            content: variableToBeUsed.content.value
+            content: articleContent
         })
     })
         // Converting to JSON
@@ -39,6 +41,7 @@ variableToBeUsed.saveDataBtn.addEventListener('click', () => {
                 variableToBeUsed.authError.classList.add('error-login')
                 variableToBeUsed.authError.textContent = "Please login to get access"
             } else {
+                console.log(dt)
                 variableToBeUsed.authError.classList.add('error-login')
                 variableToBeUsed.authError.textContent = "All fields are required"
             }

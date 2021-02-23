@@ -8,9 +8,6 @@
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-    <script>tinymce.init({ selector: 'textarea' });</script>
-    <script>tinymce.init({ selector: '#article' });</script>
     <link rel="stylesheet" href="css/dashboard-style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Abel|Roboto|Reem Kufi"
@@ -69,6 +66,7 @@
             <textarea
               name="article"
               id="article"
+              name="article"
               cols="30"
               rows="5"
               placeholder="Article"
@@ -120,8 +118,11 @@
         <div class="articles"></div>
       </div>
     </section>
+    <script src="ckeditor/ckeditor.js"></script>
     <script src="controllers/variableUsed.js"></script>
+    <script src="controllers/ckeditorConf.js"></script>
     <script src="controllers/functionUsed.js"></script>
     <script src="controllers/dashboardController.js"></script>
+    
   </body>
 </html>
