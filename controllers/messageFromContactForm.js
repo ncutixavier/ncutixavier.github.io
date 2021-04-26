@@ -15,7 +15,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore()
-
+emailjs.init('user_8Q8lp87WvxGxE6xiXQ68f')
 //Display All mesages
 // db.collection('messages').get().then((msg) => {
 //     msg.docs.map(doc => console.log(doc.data()))
@@ -40,6 +40,7 @@ workBtn.addEventListener('click', function () {
 
 
 const submitBtn = document.querySelector("#sendBtn")
+const formMessage = document.querySelector('#gform')
 
 const userName = document.querySelector("#name")
 const userEmail = document.querySelector("#e-mail")
@@ -81,20 +82,20 @@ const validation = (e) => {
         return false
 
     } else {
-        addMessage(userName.value, userEmail.value, userMessage.value)
-        fetch("https://morning-thicket-92126.herokuapp.com/api/v1/users/sendEmail", {
-            method: "POST",
-            headers: {
-                "Content-type": "application/json; charset=UTF-8"
-            },
-            body: JSON.stringify({
-                name: userName.value,
-                email: userEmail.value,
-                message: userMessage.value
-            })
-        }).then(res => res.json())
-        // .then(res => console.log(res))
-        togglePopup()
+
+        submitBtn.value = 'Sending...';
+
+        const serviceID = 'service_ikkj11e';
+        const templateID = 'template_u4z6v9l';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                submitBtn.value = 'Send Email';
+                alert('Sent!');
+            }, (err) => {
+                submitBtn.value = 'Send Email';
+                alert(JSON.stringify(err));
+            });
         clearFields()
         return true
     }
@@ -109,13 +110,14 @@ const nameIsValid = name => {
     return /^[a-zA-Z\s]+$/.test(name);
 }
 
-submitBtn.addEventListener('click', validation)
+// submitBtn.addEventListener('submit', validation)
+// formMessage.addEventListener('submit', validation)
 
-document.addEventListener('keypress', function (e) {
-    if (e.keyCode === 13 && e.which == 13) {
-        validation()
-    }
-})
+// document.addEventListener('keypress', function (e) {
+//     if (e.keyCode === 13 && e.which == 13) {
+//         validation()
+//     }
+// })
 
 
 const togglePopup = () => {
@@ -137,3 +139,74 @@ function clearFields() {
     document.querySelector("#e-mail").value = ""
     document.querySelector("#message").value = ""
 }
+
+document.getElementById('gform').addEventListener('submit', function (event) {
+    event.preventDefault()
+    let nameErr = document.querySelector(".nameErr")
+    let emailErr = document.querySelector(".emailErr")
+    let messageErr = document.querySelector(".messageErr")
+
+    if (!nameIsValid(userName.value)) {
+        nameErr.style.display = "inline"
+        userName.focus();
+        return false;
+    } else {
+        nameErr.style.display = "none"
+    }
+
+    if (!emailIsValid(userEmail.value)) {
+        emailErr.style.display = "inline"
+        userEmail.focus();
+        return false;
+    } else {
+        emailErr.style.display = "none"
+    }
+
+    if (userMessage.value === "") {
+        messageErr.style.display = "inline"
+        userMessage.focus()
+        return false
+    } else {
+        messageErr.style.display = "none"
+    }
+
+    if ((userName.value || userEmail.value || userMessage.value) == "") {
+        return false
+
+    } else {
+
+        submitBtn.value = 'Sending...';
+
+        const serviceID = 'service_ikkj11e';
+        const templateID = 'template_u4z6v9l';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                submitBtn.value = 'Send Email';
+                clearFields()
+                swal({
+                    title: "Message Sent!",
+                    text: "Your message has been sent! We wil get back to you as soon as possible.",
+                    type: 'success'
+                })
+            }, (err) => {
+                submitBtn.value = 'Send Email';
+                alert(JSON.stringify(err));
+            });
+        return true
+    }
+
+    // submitBtn.value = 'Sending...';
+
+    // const serviceID = 'service_ikkj11e';
+    // const templateID = 'template_u4z6v9l';
+
+    // emailjs.sendForm(serviceID, templateID, this)
+    //     .then(() => {
+    //         submitBtn.value = 'Send Email';
+    //         alert('Sent!');
+    //     }, (err) => {
+    //         submitBtn.value = 'Send Email';
+    //         alert(JSON.stringify(err));
+    //     });
+});
