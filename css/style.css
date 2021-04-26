@@ -1218,3 +1218,13 @@ hr {
 			transform: rotate(360deg)
 	}
 }
+
+#sendBtn{
+  background-color: #0f295b;
+  color: #fff;
+  cursor: pointer;
+}
+
+#sendBtn:hover{
+  background-color: #081835;
+}
